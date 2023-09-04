@@ -1,13 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿//Programador: Osman Robles --- Carnet: 194723
 class Program
 {
+    //Menu principal desde donde se llaman las otras dos clases
     static void Main(string[] args)
     {
         bool salir = false;
 
         while (!salir)
+
         {
-            Console.WriteLine("Menú Principal:");
+            Console.Clear();
+            Console.WriteLine("---------Menú Principal del programa---------");
             Console.WriteLine("1. Ejercicio 1");
             Console.WriteLine("2. Ejercicio 2");
             Console.WriteLine("3. Salir");
@@ -39,46 +42,59 @@ class Program
 
 
 
-
+//Clase para el ejercicio 1
 public class Ejercicio1Clave2
 {
     public static void RealizarEjercicio()
     {
+            //Declaración de arreglos para datos de la cancion
             String[] artista = new String[1000];
             String[] titulo = new String[1000];
             double[] duracion = new double[1000];
             double[] size = new double[1000];
+
+
+            //Variables auxiliares
             Boolean stopProgram = false;
             int songsSize = 0;
-
             String respuesta = "";
 
+            //Bucle para ir agregando canciones
             for (int i = 0; stopProgram == false; i++)
             {
+
                 Console.WriteLine("Bienvenido al programa de ingreso de datos de canciones");
-                Console.WriteLine("A continuacion se le pediran algunos datos:");
-                Console.WriteLine("Ingrese el nombre del artistas de la cancion:");
+                Console.WriteLine("A continuacion se le pediran algunos datos");
+                Console.WriteLine("----------------------------------------------\n");
+            
+                Console.WriteLine("Ingrese el nombre del artista de la canción:");
                 artista[i] = Console.ReadLine();
 
-                Console.WriteLine("Ingrese el titulo de la cancion:");
+                Console.WriteLine("Ingrese el título de la canción:");
                 titulo[i] = Console.ReadLine();
 
-                Console.WriteLine("Ingrese la duracion de la cancion en segundos(solo ingrese el valor numerico)");
+                Console.WriteLine("Ingrese la duración de la canción en segundos (solo ingrese el valor numérico): ");
+                
                 duracion[i] = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("Ingrese el tama;o de la cancion en KB (solo ingrese el valor numerico)");
+                Console.WriteLine("Ingrese el tamaño de la canción en KB (solo ingrese el valor numérico): ");
                 size[i] = double.Parse(Console.ReadLine());
 
                 songsSize++;
 
+
+                //Impresion de datos ingresados 
+
                 Console.WriteLine("Los datos que se ingresaron son:");
+
                 for (int j = 0; j < songsSize; j++)
                 {
-                    Console.WriteLine($"Cancion {j + 1}:");
+
+                    Console.WriteLine($"Canción {j + 1}:-------------------------------");
                     Console.WriteLine($"Nombre del artista: {artista[j]}");
-                    Console.WriteLine($"Titulo de la cancion: {titulo[j]}");
-                    Console.WriteLine($"Duracion de la cancion: {duracion[j]} s");
-                    Console.WriteLine($"Tama;o de la cancion: {size[j]} KB");
+                    Console.WriteLine($"Título de la canción: {titulo[j]}");
+                    Console.WriteLine($"Duración de la canción: {duracion[j]} segundos");
+                    Console.WriteLine($"Tamaño de la canción: {size[j]} KB");
                     Console.WriteLine("------------------------------------------------");
 
                 }
@@ -86,6 +102,8 @@ public class Ejercicio1Clave2
                 Console.WriteLine("Desea ingresar los datos de otra cancion? [Si/No]");
                 respuesta = Console.ReadLine();
 
+
+                //Condicional para detener o seguir el programa de acuerdo a la respuesta anterior
                 if (respuesta == "Si" || respuesta == "si")
                 {
                     stopProgram = false;
@@ -101,8 +119,10 @@ public class Ejercicio1Clave2
     }
 }
 
+//Clase para el ejercicio 2
 public class Ejercicio2Clave2
 {
+    //Declaracion de arreglos para los datos de los estudiantes
     private static string[] codigoEstudiante = new string[1000];
     private static string[] nombreCompleto = new string[1000];
     private static string[] fechaNacimiento = new string[1000];
@@ -110,6 +130,8 @@ public class Ejercicio2Clave2
     private static string[] fechaRegistro = new string[1000];
     private static int totalEstudiantes = 0;
 
+
+    //Llamado del menu del ejercicio
     public static void RealizarEjercicio()
     {
         bool mostrarMenu = true;
@@ -120,19 +142,23 @@ public class Ejercicio2Clave2
     }
 
 
+    //Menu local del programa
     static public bool menuPrincipal()
     {
         Console.Clear();
-        Console.WriteLine("Bienvenido menu escolar de estudiantes");
+        Console.WriteLine("Bienvenido menú escolar de estudiantes");
 
-        Console.WriteLine("Menu escolar");
+        Console.WriteLine("--------------Menu escolar--------------");
         Console.WriteLine("1. Agregar un alumno");
         Console.WriteLine("2. Mostrar listado de alumnos");
-        Console.WriteLine("3. Buscar alumno por codigo");
-        Console.WriteLine("4. Editar informacion de estudiante");
+        Console.WriteLine("3. Buscar alumno por código");
+        Console.WriteLine("4. Editar información de estudiante");
         Console.WriteLine("5. Salir del programa");
-        Console.WriteLine("Seleccione el numero de opcion:");
 
+        Console.WriteLine("\nSeleccione el número de opción:");
+
+
+        //Seleccion de tarea de acuerdo a la opcion seleccionada anteriormente
         switch (Console.ReadLine())
         {
             case "1":
@@ -170,9 +196,9 @@ public class Ejercicio2Clave2
                 }
                 else
                 {
+                    Console.WriteLine("Gracias por utilizar el programa");
                     return false;
                 }
-
 
 
             case "4":
@@ -194,33 +220,38 @@ public class Ejercicio2Clave2
 
     }
 
+    //Metodo para agregar datos de estudiantes a cada array
     static void agregarAlumno()
 
     {
         bool agregarMasEstudiantes = true;
         String respuesta = "";
         Console.WriteLine("--------------Agregado de estudiantes---------------");
+
         for (int i = 0; agregarMasEstudiantes; i++)
         {
-            Console.WriteLine("Ingrese el codigo del estudiante:");
+            Console.WriteLine("Ingrese el código del estudiante: ");
             codigoEstudiante[i] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese el nombre completo del estudiant:");
+            Console.WriteLine("Ingrese el nombre completo del estudiante: ");
             nombreCompleto[i] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese la fecha de nacimiento del estudiante:");
+            Console.WriteLine("Ingrese la fecha de nacimiento del estudiante: ");
             fechaNacimiento[i] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese el grado del estudiante:");
+            Console.WriteLine("Ingrese el grado del estudiante: ");
             grado[i] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese la fecha de registro del estudiante");
+            Console.WriteLine("Ingrese la fecha de registro del estudiante: ");
             fechaRegistro[i] = Console.ReadLine();
 
             totalEstudiantes++;
 
+           
             Console.WriteLine("¿Desea agregar otro estudiante? (Si/No)");
             respuesta = Console.ReadLine();
+
+            //Condicional para detener o seguir con el programa
 
             if (respuesta == "Si" || respuesta == "si")
             {
@@ -253,6 +284,7 @@ public class Ejercicio2Clave2
         String codigoLocal = "";
         int posicionAlumno = 0;
         bool encontroAlumno = false;
+
         Console.WriteLine("--------Mostrado de alumno por codigo--------");
         Console.WriteLine("Ingrese el codigo del alumno");
         codigoLocal = Console.ReadLine();
@@ -273,6 +305,10 @@ public class Ejercicio2Clave2
             Console.WriteLine("{0,-15} {1,-30} {2,-15} {3,-15} {4,-15}", codigoEstudiante[posicionAlumno], nombreCompleto[posicionAlumno], fechaNacimiento[posicionAlumno], grado[posicionAlumno], fechaRegistro[posicionAlumno]);
 
         }
+        else
+        {
+            Console.WriteLine("No se encontró el estudiante con el código proporcionado");
+        }
 
 
     }
@@ -282,8 +318,8 @@ public class Ejercicio2Clave2
         String codigoLocal = "";
         int posicionAlumno = 0;
         bool encontroAlumno = false;
-        Console.WriteLine("Editado de informacion de un estudiante");
-        Console.WriteLine("Ingrese el codigo del alumno que quiere editar");
+        Console.WriteLine("Editado de información de un estudiante");
+        Console.WriteLine("Ingrese el código del alumno que quiere editar");
         codigoLocal = Console.ReadLine();
 
 
@@ -299,27 +335,26 @@ public class Ejercicio2Clave2
         }
         if (encontroAlumno == true)
         {
-            Console.WriteLine("Ingrese el codigo del estudiante:");
-            codigoEstudiante[posicionAlumno] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese el nombre completo del estudiant:");
+
+            Console.WriteLine("Ingrese el nombre completo del estudiante: ");
             nombreCompleto[posicionAlumno] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese la fecha de nacimiento del estudiante:");
+            Console.WriteLine("Ingrese la fecha de nacimiento del estudiante: ");
             fechaNacimiento[posicionAlumno] = Console.ReadLine();
 
-            Console.WriteLine("Ingrese el grado del estudiante:");
+            Console.WriteLine("Ingrese el grado del estudiante: ");
             grado[posicionAlumno] = Console.ReadLine();
 
             Console.WriteLine("Ingrese la fecha de registro del estudiante");
             fechaRegistro[posicionAlumno] = Console.ReadLine();
 
-            Console.WriteLine($"Se ha editado la informacion del estudiante con codigo {codigoLocal}");
+            Console.WriteLine($"Se ha editado la información del estudiante con código {codigoLocal}");
 
         }
         else
         {
-            Console.WriteLine("No se encontro el estudiante");
+            Console.WriteLine("No se encontro el estudiante con el código proporcionado");
         }
 
     }
