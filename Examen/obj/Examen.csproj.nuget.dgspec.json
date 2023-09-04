@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\osman300\\OneDrive\\Documentos\\Visual\\Examen\\Examen\\Examen.csproj": {}
+    "C:\\Users\\osman300\\Documents\\GitHub\\DAEEvaluations\\Examen\\Examen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\osman300\\OneDrive\\Documentos\\Visual\\Examen\\Examen\\Examen.csproj": {
+    "C:\\Users\\osman300\\Documents\\GitHub\\DAEEvaluations\\Examen\\Examen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\osman300\\OneDrive\\Documentos\\Visual\\Examen\\Examen\\Examen.csproj",
+        "projectUniqueName": "C:\\Users\\osman300\\Documents\\GitHub\\DAEEvaluations\\Examen\\Examen.csproj",
         "projectName": "Examen",
-        "projectPath": "C:\\Users\\osman300\\OneDrive\\Documentos\\Visual\\Examen\\Examen\\Examen.csproj",
+        "projectPath": "C:\\Users\\osman300\\Documents\\GitHub\\DAEEvaluations\\Examen\\Examen.csproj",
         "packagesPath": "C:\\Users\\osman300\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\osman300\\OneDrive\\Documentos\\Visual\\Examen\\Examen\\obj\\",
+        "outputPath": "C:\\Users\\osman300\\Documents\\GitHub\\DAEEvaluations\\Examen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

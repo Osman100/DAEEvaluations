@@ -263,11 +263,7 @@ public class Ejercicio2Clave2
             {
                 posicionAlumno = j;
                 encontroAlumno = true;
-            }
-            else
-            {
-                encontroAlumno = false;
-
+                break;
             }
         }
         if (encontroAlumno == true)
@@ -297,12 +293,9 @@ public class Ejercicio2Clave2
             {
                 posicionAlumno = j;
                 encontroAlumno = true;
+                break;
             }
-            else
-            {
-                encontroAlumno = false;
 
-            }
         }
         if (encontroAlumno == true)
         {
