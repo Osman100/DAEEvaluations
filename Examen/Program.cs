@@ -27,6 +27,7 @@ class Program
                     Ejercicio2Clave2.RealizarEjercicio();
                     break;
                 case "3":
+                    Console.WriteLine("Gracias por utilizar el programa, que tenga un buen día");
                     salir = true;
                     break;
                 default:
